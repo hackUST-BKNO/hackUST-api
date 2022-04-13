@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answsers",
+  "info": {
+    "singularName": "answser",
+    "pluralName": "answsers",
+    "displayName": "answser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "answer": {
+      "type": "text"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee"
+    },
+    "AID": {
+      "type": "uid"
+    },
+    "created": {
+      "type": "date"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    }
+  }
+}
