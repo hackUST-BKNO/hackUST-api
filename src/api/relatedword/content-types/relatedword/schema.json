@@ -4,7 +4,8 @@
   "info": {
     "singularName": "relatedword",
     "pluralName": "relatedwords",
-    "displayName": "relatedword"
+    "displayName": "relatedword",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
