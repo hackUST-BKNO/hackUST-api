@@ -20,18 +20,21 @@
     },
     "answsers": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::answser.answser"
+      "relation": "manyToMany",
+      "target": "api::answser.answser",
+      "inversedBy": "tags"
     },
     "questions": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::question.question"
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "inversedBy": "tags"
     },
     "relatedwords": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::relatedword.relatedword"
+      "relation": "manyToMany",
+      "target": "api::relatedword.relatedword",
+      "inversedBy": "tags"
     }
   }
 }

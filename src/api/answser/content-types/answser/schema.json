@@ -14,8 +14,9 @@
   "attributes": {
     "employee": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::employee.employee"
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "answsers"
     },
     "AID": {
       "type": "uid"
@@ -25,18 +26,14 @@
     },
     "question": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::question.question"
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "answsers"
     },
     "upvote": {
       "type": "integer",
       "required": true,
       "min": 0
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
     },
     "answermedia": {
       "type": "media",
@@ -52,6 +49,12 @@
     "answer": {
       "type": "richtext",
       "required": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "answsers"
     }
   }
 }

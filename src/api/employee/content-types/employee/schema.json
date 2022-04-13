@@ -28,6 +28,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::position.position"
+    },
+    "answsers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answser.answser",
+      "mappedBy": "employee"
     }
   }
 }
