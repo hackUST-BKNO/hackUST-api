@@ -25,6 +25,21 @@
     },
     "created": {
       "type": "date"
+    },
+    "upvote": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "answsers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answser.answser"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
     }
   }
 }

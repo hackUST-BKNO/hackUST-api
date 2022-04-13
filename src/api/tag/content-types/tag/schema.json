@@ -4,10 +4,11 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "tag"
+    "displayName": "tag",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -16,6 +17,16 @@
     },
     "TID": {
       "type": "uid"
+    },
+    "answsers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answser.answser"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question"
     }
   }
 }
