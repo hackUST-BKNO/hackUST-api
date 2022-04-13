@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relatedwords",
+  "info": {
+    "singularName": "relatedword",
+    "pluralName": "relatedwords",
+    "displayName": "relatedword"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "word": {
+      "type": "string",
+      "required": true,
+      "default": "relatedwords"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "answer": {
-      "type": "text"
-    },
     "employee": {
       "type": "relation",
       "relation": "oneToOne",
@@ -40,6 +37,21 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "answermedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "answer": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question": {
-      "type": "text"
-    },
     "employee": {
       "type": "relation",
       "relation": "oneToOne",
@@ -40,6 +37,21 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "questionmedia": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "question": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

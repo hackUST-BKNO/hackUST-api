@@ -82,6 +82,19 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::answser.answser"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee"
     }
   }
 }

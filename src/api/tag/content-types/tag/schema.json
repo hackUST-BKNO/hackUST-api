@@ -27,6 +27,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::question.question"
+    },
+    "relatedwords": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::relatedword.relatedword"
     }
   }
 }
