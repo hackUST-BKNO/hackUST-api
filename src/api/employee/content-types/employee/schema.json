@@ -34,6 +34,31 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "employee"
+    },
+    "answsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::answser.answser",
+      "inversedBy": "employees"
+    },
+    "upvote": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::upvote.upvote",
+      "inversedBy": "employee"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "employee"
     }
   }
 }

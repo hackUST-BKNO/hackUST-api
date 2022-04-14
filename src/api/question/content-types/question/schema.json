@@ -14,8 +14,9 @@
   "attributes": {
     "employee": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::employee.employee"
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "questions"
     },
     "QID": {
       "type": "uid"
@@ -53,12 +54,6 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "mappedBy": "questions"
-    },
-    "users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
       "mappedBy": "questions"
     },
     "upvotes": {

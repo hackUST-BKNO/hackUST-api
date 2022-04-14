@@ -24,12 +24,6 @@
       "target": "api::question.question",
       "inversedBy": "upvotes"
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "upvote"
-    },
     "whoseupvotes": {
       "type": "string",
       "required": true
@@ -37,6 +31,12 @@
     "VID": {
       "type": "uid",
       "required": true
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "mappedBy": "upvote"
     }
   }
 }

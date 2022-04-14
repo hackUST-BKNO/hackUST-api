@@ -63,36 +63,10 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "answsers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::answser.answser",
-      "inversedBy": "users"
-    },
-    "questions": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::question.question",
-      "inversedBy": "users"
-    },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "employee": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::employee.employee",
-      "mappedBy": "user"
-    },
-    "upvote": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::upvote.upvote",
       "mappedBy": "user"
     }
   }
