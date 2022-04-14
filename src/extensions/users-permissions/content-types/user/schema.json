@@ -65,23 +65,15 @@
     },
     "answsers": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::answser.answser"
+      "relation": "manyToMany",
+      "target": "api::answser.answser",
+      "inversedBy": "users"
     },
     "questions": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::question.question"
-    },
-    "upvoteanswers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::answser.answser"
-    },
-    "upvotequestions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::answser.answser"
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "inversedBy": "users"
     },
     "avatar": {
       "type": "media",
@@ -94,7 +86,14 @@
     "employee": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::employee.employee"
+      "target": "api::employee.employee",
+      "mappedBy": "user"
+    },
+    "upvote": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::upvote.upvote",
+      "inversedBy": "user"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "upvotes",
+  "info": {
+    "singularName": "upvote",
+    "pluralName": "upvotes",
+    "displayName": "upvote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "answsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::answser.answser",
+      "inversedBy": "upvotes"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "inversedBy": "upvotes"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "upvote"
+    }
+  }
+}

@@ -54,6 +54,18 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "mappedBy": "questions"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "questions"
+    },
+    "upvotes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::upvote.upvote",
+      "inversedBy": "questions"
     }
   }
 }

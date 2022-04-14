@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "employee": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::employee.employee",
-      "inversedBy": "answsers"
-    },
     "AID": {
       "type": "uid"
     },
@@ -54,6 +48,18 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
+      "mappedBy": "answsers"
+    },
+    "upvotes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::upvote.upvote",
+      "inversedBy": "answsers"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
       "mappedBy": "answsers"
     }
   }
