@@ -28,10 +28,6 @@
       "type": "string",
       "required": true
     },
-    "VID": {
-      "type": "uid",
-      "required": true
-    },
     "employee": {
       "type": "relation",
       "relation": "oneToOne",

@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "TID": {
-      "type": "uid"
-    },
     "answsers": {
       "type": "relation",
       "relation": "manyToMany",

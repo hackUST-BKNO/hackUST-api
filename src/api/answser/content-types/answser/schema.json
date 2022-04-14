@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "AID": {
-      "type": "uid"
-    },
     "created": {
       "type": "date"
     },
