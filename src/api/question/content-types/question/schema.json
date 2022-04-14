@@ -65,7 +65,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::upvote.upvote",
-      "inversedBy": "questions"
+      "mappedBy": "questions"
     }
   }
 }

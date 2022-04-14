@@ -4,7 +4,8 @@
   "info": {
     "singularName": "upvote",
     "pluralName": "upvotes",
-    "displayName": "upvote"
+    "displayName": "upvote",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,6 +29,14 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "upvote"
+    },
+    "whoseupvotes": {
+      "type": "string",
+      "required": true
+    },
+    "VID": {
+      "type": "uid",
+      "required": true
     }
   }
 }

@@ -54,7 +54,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::upvote.upvote",
-      "inversedBy": "answsers"
+      "mappedBy": "answsers"
     },
     "users": {
       "type": "relation",
